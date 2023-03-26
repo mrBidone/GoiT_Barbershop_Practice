@@ -1,0 +1,134 @@
+
+:root {
+    --main-text-color: #555555;
+    --secondary-text-color: #303030;
+    --accent-text-color: #FF6C00;
+    --main-bg-color: #FFFFFF;
+    --secondary-bg-color: #F7F7F7;
+    --dark-bg-color: #191C26;
+    --dark-bg-text-color: #FFFFFF;
+    --hero-slogan-color: rgba(157, 164, 190, 0.6);
+    --hero-text-color: #9DA4BD;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em; 
+    color: var(--main-text-color);
+}
+li {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+.section-header, .hero {
+    background-color: var(--dark-bg-color);
+}
+.section-header .link {
+    color: var(--dark-bg-text-color);
+}
+
+.nav-site .link:hover,
+.nav-site .link:focus {
+    color: var(--accent-text-color);
+}
+
+.hero-text {
+    color: var(--hero-slogan-color);
+}
+.hero-title {
+    color: var(--dark-bg-text-color);
+}
+.hero-item {
+    color: var(--hero-text-color);
+}
+
+.aside {
+    background-color: var(--main-bg-color);
+}
+.aside-link {
+    color: var(--secondary-text-color);
+}
+
+.aside-link:hover, .aside-link:focus {
+    color: var(--accent-text-color);
+}
+
+.label {
+    color: var(--secondary-text-color);
+}
+.section-title {
+    color: var(--secondary-text-color);
+}
+
+.section-price {
+    background-color: var(--dark-bg-color);
+}
+
+.section-price .label {
+    color: var(--hero-slogan-color);
+}
+
+.section-price .title {
+    color: var(--dark-bg-text-color);
+}
+
+.section-price .list {
+    color: var(--hero-text-color);
+}
+
+.counter-item {
+    background-color: var(--secondary-bg-color) ;
+}
+
+.counter-item {
+    color: var(--secondary-text-color);
+}
+
+.sup {
+    color: var(--accent-text-color);
+}
+
+.section-team {
+    background-color: var(--secondary-bg-color);
+}
+
+.team-item {
+    color: var(--accent-text-color);
+}
+
+.section-form {
+    background-color: var(--dark-bg-color);
+}
+
+.section-form .title {
+    color: var(--dark-bg-text-color);
+}
+
+.section-form .link {
+    color: var(--hero-text-color);
+}
+.timetable {
+    color: var(--hero-text-color);
+}
+.copyrights {
+    color: var(--hero-text-color);
+}
+
+.section-footer .link {
+    color: var(--secondary-text-color);
+}
+/*  */
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    border: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden;
+}
