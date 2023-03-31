@@ -9,19 +9,43 @@
     
     --title-font: "Raleway", sans-serif;
 
+    --grid-item: 1;
+
     /* --main-bg-color: #FFFFFF;
     
     --dark-bg-text-color: #FFFFFF;
     --hero-slogan-color: rgba(157, 164, 190, 0.6); */
     
 }
-body{
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 0.02em; 
     color: var(--main-text-color);
 }
+
+h1,h2,h3,h4,h5,h6,p {
+    margin-top: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 address {
     font-style: normal;
 }
@@ -49,10 +73,44 @@ address {
 
 .list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-box {
+    flex-basis: calc((100% - 30px) / 2);     
+}
+
+.grid { 
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+
+.grid-item {
+    flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
+    margin-left: 30px;
+    margin-top: 30px;
+}
 
 .button {
+    min-width: 160px;
+    padding: 12px 20px;
+    border: 1px solid var(--accent-color) ;
+    border-radius: 25px;
     font-weight: 600;
     font-size: 12px;
     line-height: 1.33;
@@ -60,13 +118,38 @@ address {
     text-transform: uppercase;
     cursor: pointer;
     color: var(--title-color);
+    
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--accent-color);
+    color: var(--secondary-bg-color);
+}
+
+.header .button{
+    margin-left: 40px;
+}
+
+.menu {
+    display: inline-flex;
+}
+
+.menu-item:not(:last-child) {
+    margin-right: 40px;
 }
 
 .social-list{
+    display: flex;
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
     color: var(--title-color);
+}
+
+.social-item:not(:last-child) {
+    margin-right: 40px;
+
 }
 
 .copyright {
@@ -77,11 +160,16 @@ address {
     color: var(--dark-bg-text-color);
 }
 
+.logo {
+    display: block;
+}
+
 .title {
     font-family: var(--title-font);
     font-weight: 700;
     letter-spacing: 0.05em;
     color: var(--title-color);
+    margin-bottom: 20px;
 }
 
 .title-label {
@@ -91,6 +179,7 @@ address {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--title-color);
+    margin-bottom: 20px;
 }
 
 .page-title {
@@ -104,14 +193,61 @@ address {
     line-height: 1.167;
 }
 
+.section {
+    padding: 130px 0;
+}
 
 
 .header {
+    padding: 32px 0;
     font-weight: 600;
     font-size: 12px;
     line-height: 1.33;
     letter-spacing: 0.1em;
     color: #FFFFFF;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header .logo {
+    margin-right: 70px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hero-content {
+    /* width: calc(100%/12*5); задаем ширину контейнера 
+    1й или 2й вариант */ 
+    max-width: 500px;
+}
+
+.price-wrap {
+    display: flex;
+
+}
+
+.price-list {
+    width: 50%;
+    padding: 30px 40px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
 }
 
 .benefits-item {
@@ -143,6 +279,7 @@ address {
 }
 
 .team-item {
+    --grid-item: 3;
     font-weight: 400;
     text-align: center;
 }
@@ -157,6 +294,12 @@ address {
     font-size: 14px;
     line-height: 1.36;
     color: var(--accent-color);
+}
+
+
+
+.gallery-item{
+    --grid-item: 4;
 }
 
 .dark-bg {
